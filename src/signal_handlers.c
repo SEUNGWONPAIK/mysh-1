@@ -1,11 +1,14 @@
 #include "signal_handlers.h"
+#include <signal.h>
 
 void catch_sigint(int signalNo)
 {
-  // TODO: File this!
+  if(signalNo==SIGINT)
+	signal(SIGINT,SIG_IGN);
 }
 
 void catch_sigtstp(int signalNo)
 {
-  // TODO: File this!
+  if(signalNo==SIGTSTP)
+	signal(SIGTSTP,SIG_IGN);
 }

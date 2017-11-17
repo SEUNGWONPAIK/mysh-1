@@ -34,7 +34,7 @@ void parse_single_command(const char* command,
   const int kMaxArgc = 512;
   *argv = (char**)malloc(kMaxArgc * sizeof(char*));
   for (int i = 0; i < kMaxArgc; ++i)
-    (*argv)[i] = NULL;
+    (*argv)[i] = NULL; //null initial
 
   char buf[4096];
   strcpy(buf, command);
